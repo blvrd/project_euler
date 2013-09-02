@@ -1,3 +1,7 @@
+#Problem 4
+#A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+#Find the largest palindrome made from the product of two 3-digit numbers.
+
 class Integer
   def factors() (1..self).select { |n| (self % n).zero? } end
 end
@@ -9,7 +13,7 @@ def palindrome_check
     palindromes << num if num.to_s == num.to_s.reverse
   end
   palindromes.reverse.each do |pal|
-    #puts something if pal.factors include? two three digit numbers 
+    #puts something if pal.factors include? two three digit numbers
   end
 end
 
