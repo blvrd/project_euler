@@ -7,4 +7,3 @@ def difference
 end
 
 difference
-
