@@ -6,15 +6,20 @@ def find_greatest_product
 
   digits = x.to_s.chars.map(&:to_i)
 
-  begin
-    digits.first(5).inject(:*)
-    digits.shift
-  end while digits.length < 5
+  product_arr = []
 
-  
+  1000.times do 
+    product = digits.first(5).inject(:*)
+    digits.shift
+    product_arr << product
+  end
+
+ puts product_arr.max
+
 end
 
 find_greatest_product
 
+#Answer is 40824
 
 
