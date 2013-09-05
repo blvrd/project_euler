@@ -8,7 +8,7 @@ def find_greatest_product
 
   product_arr = []
 
-  1000.times do 
+  digits.length.times do 
     product = digits.first(5).inject(:*)
     digits.shift
     product_arr << product
@@ -21,5 +21,3 @@ end
 find_greatest_product
 
 #Answer is 40824
-
-
