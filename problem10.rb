@@ -3,5 +3,6 @@
 #Find the sum of all the primes below two million.
 
 require 'prime'
+
 answer = Prime.each(2_000_000).inject(:+)
 puts answer
