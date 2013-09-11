@@ -1,10 +1,8 @@
 #Problem 12
 #What is the value of the first triangle number to have over five hundred divisors?
 
-def triangle_num
-  arr = []
-  arr << 1, 2, 3
-  puts arr
+def triangle_nums(n)
+  puts 1.upto(n).inject(:+)
 end
 
-triangle_num
+triangle_nums(7)
