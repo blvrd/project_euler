@@ -1,27 +1,26 @@
 #Problem 12
 #What is the value of the first triangle number to have over five hundred divisors?
-
-FACTOR_LIMIT = 500
-
-def find_factors(n)
-  @factors = []
-  (1..n).each do |i|
-    @factors.push(i) if n % i == 0
-    end
-  @factors = @factors.sort
-  puts @factors
+def trig(n)
+   return ((n+1) * n) / 2
 end
 
-def triangle_num(x)
-  @num = ((x.to_f / 2) * (x + 1))
-  puts @num
+def count_div(n)
+   lim = Math.sqrt(n).to_i
+   ret = 2
+   ret = 4 if n & 1 == 0 
+   
+   3.upto(lim-1) do |i|
+    ret = ret + 2 if n.modulo(i) == 0
+   end
+   
+   ret = ret.next if n.modulo(lim) == 0
+   ret
 end
 
-def solution
-  x = 100
-  triangle_num(x)
-  puts find_factors(@num)
+cur = 10000
+while true
+   break if count_div(trig(cur)) > 500
+   cur = cur.next
 end
 
-triangle_num(100)
-find_factors(@num)
+puts cur, trig(cur)
