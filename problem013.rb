@@ -104,5 +104,5 @@ num = [37107287533902102798797998220837590246510135740250,
 
 #I split each of the 50 integer sequences manually into elements of an array in order to be able to manipulate them as integers rather than strings. 
 
-puts num.inject(:+).to_s.first[0, 10]# It took me a while to figure out how to print out the first ten integers. At first I tried #first(10), but got an "undefined method `first'" error message. Apparently the bracket syntax allows you to just print from the value of the first argument to the value of the second argument.
+puts num.inject(:+).to_s.[0, 10]# It took me a while to figure out how to print out the first ten integers. At first I tried #first(10), but got an "undefined method `first'" error message. Apparently the bracket syntax allows you to just print from the value of the first argument to the value of the second argument.
 
